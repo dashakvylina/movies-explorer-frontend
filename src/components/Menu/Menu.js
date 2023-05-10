@@ -27,7 +27,7 @@ export const Menu = () => {
                             <div className="menu__side-all">
                                 <Link className="menu__side-link" to={"/"}>Главная</Link>
                                 <Link className="menu__side-link" to={'/movies'}>Фильмы</Link>
-                                <Link className="menu__side-link" to={'/saved'}> Сохраненные фильмы</Link>
+                                <Link className="menu__side-link" to={'/saved-movies'}> Сохраненные фильмы</Link>
                             </div>
                             <Link to={'/profile'} className="menu__side-btn">Аккаунт</Link>
                         </div>

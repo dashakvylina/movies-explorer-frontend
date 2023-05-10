@@ -7,7 +7,7 @@ import './Login.css';
 export const Login = () => {
 
     return (
-        <div className="register__signup">
+        <section className="register__signup">
             <img src={logo} className="header__logo header__logo_register" alt="Логотип" />
             <div className="register__text">Рады видеть!</div>
             <form className="register__form">
@@ -45,10 +45,6 @@ export const Login = () => {
                     Регистрация
                 </Link>
             </div>
-
-
-
-
-        </div >
+        </section >
     )
 }

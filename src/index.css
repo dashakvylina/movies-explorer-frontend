@@ -45,17 +45,12 @@ h4 {
   padding: 0px;
 }
 
-/* @media screen and (max-width: 321px) { */
+/*
 body {
   -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
   scrollbar-width: none;
-  /* Firefox */
 }
 
 body::-webkit-scrollbar {
   display: none;
-  /* Safari and Chrome */
-}
-
-/* } */
+} */

@@ -31,6 +31,7 @@
 .student__photo {
     width: 270px;
     height: auto;
+    border-radius: 10px;
 }
 
 .student__about {
@@ -47,7 +48,7 @@
     opacity: 10%
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1279px) {
     .student {
         width: calc(100% - 100px);
     }
@@ -92,7 +93,7 @@
 
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 767px) {
     .student {
         width: calc(100% - 28px);
         margin-top: 140px;
@@ -118,7 +119,7 @@
     }
 
     .student__photo {
-        width: 292px;
+        width: 100%;
         height: auto;
         margin-bottom: 40px;
     }
@@ -133,7 +134,6 @@
     .student__about-life {
         font-size: 11px;
         line-height: 16px;
-        width: 292px;
         height: auto;
         margin: 0;
     }

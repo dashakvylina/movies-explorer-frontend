@@ -15,11 +15,13 @@ export const Main = () => {
     return (
         <>
             <Header />
-            <Promo />
-            <AboutProject />
-            <Techs />
-            <AboutMe />
-            <Porfolio />
+            <main>
+                <Promo />
+                <AboutProject />
+                <Techs />
+                <AboutMe />
+                <Porfolio />
+            </main>
             <Footer />
         </>
     )

@@ -69,7 +69,7 @@
 
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1279px) {
     .about {
         width: calc(100% - 100px);
         padding-top: 90px;
@@ -104,7 +104,7 @@
     }
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 767px) {
 
     .about {
         width: calc(100% - 36px);
@@ -141,7 +141,7 @@
 
     .progress {
         margin-bottom: 140px;
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 35.21% 1fr;
     }
 
     .progress__bar {

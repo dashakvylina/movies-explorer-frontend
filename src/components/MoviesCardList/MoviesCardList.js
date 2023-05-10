@@ -45,12 +45,12 @@ const movies = [
 export const MoviesCardList = ({ saved }) => {
 
     return (
-        <div className="movies">
+        <section className="movies">
             <div className="movies__line"></div>
-            <div className="movies__list">{movies.map(mov => <MoviesCard movie={mov} key={mov.id} saved={saved} />)}</div>
+            <ul className="movies__list">{movies.map(mov => <MoviesCard movie={mov} key={mov.id} saved={saved} />)}</ul>
             <button
                 className="movies__more-btn"
                 type="button">Еще</button>
-        </div>
+        </section>
     )
 }

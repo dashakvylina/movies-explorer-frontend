@@ -10,7 +10,7 @@ export const Profile = () => {
     return (
         <>
             <Header />
-            <div className="profile">
+            <main className="profile">
                 <h4 className="profile__title"> Привет, Дарья! </h4>
                 <div className="profile__info">
                     <form className="profile__form">
@@ -44,7 +44,7 @@ export const Profile = () => {
                         </Link>
                     </div >
                 </div>
-            </div >
+            </main >
         </>
     )
 }

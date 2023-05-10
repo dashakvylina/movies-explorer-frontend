@@ -6,7 +6,7 @@ export const AboutProject = () => {
 
     return (
 
-        <div className="about" id="about">
+        <section className="about" id="about">
             <h4 className="about__title">О проекте</h4>
             <div className="about__text">
                 <div>
@@ -26,7 +26,7 @@ export const AboutProject = () => {
                 <div className="progress__info">Back-end</div>
                 <div className="progress__info">Front-end</div>
             </div>
-        </div>
+        </section>
 
     )
 };

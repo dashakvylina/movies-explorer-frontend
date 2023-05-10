@@ -7,18 +7,16 @@ import { Header } from '../HeaderComponent';
 import { Footer } from '../Footer';
 import Preloader from "../Preloader/Preloader";
 
-
-
-
-
 export const Movies = ({ saved }) => {
     const [isLoading, setIsLoading] = useState(false);
 
     return isLoading ? <Preloader /> :
         <>
             <Header />
-            <SearchForm />
-            <MoviesCardList saved={saved} />
+            <main>
+                <SearchForm />
+                <MoviesCardList saved={saved} />
+            </main>
             <Footer />
         </>
 

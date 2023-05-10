@@ -6,7 +6,7 @@ import photo from "../../images/test.jpeg";
 export const AboutMe = () => {
 
     return (
-        <div className="student" id="student">
+        <section className="student" id="student">
             <h4 className="student__title">Студент</h4>
             <div className="student__about">
                 <div className="student__about_desc">
@@ -25,7 +25,7 @@ export const AboutMe = () => {
 
                 <img src={photo} className="student__photo" alt="Мое фото" />
             </div>
-        </div>
+        </section>
     )
 };
 

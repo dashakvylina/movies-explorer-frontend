@@ -5,7 +5,7 @@ import './Footer.css';
 export const Footer = () => {
 
     return (
-        <div className="footer">
+        <footer className="footer">
             <div className="footer__text">Учебный проект Яндекс.Практикум х BeatFilm.</div>
             <div className="footer__info">
                 <div className="footer__icon">© 2020</div>
@@ -14,6 +14,6 @@ export const Footer = () => {
                     <div>Github</div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 };

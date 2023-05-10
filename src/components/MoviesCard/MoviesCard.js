@@ -2,14 +2,14 @@ import React from "react";
 import './MoviesCard.css';
 import saveImg from "../../images/save.svg";
 import likedImg from "../../images/saved.svg";
-import closeImg from "../../images/delete.svg";
+import closeImg from "../../images/closeIcon.svg";
 import filmPhoto from "../../images/filmphoto.png";
 
 export const MoviesCard = ({ movie, saved }) => {
 
     return (
 
-        <div className="moviescard">
+        <li className="moviescard">
             <div className="moviescard__info">
                 <div className="moviescard__about">
                     <div className="moviescard__name">{movie.name}</div>
@@ -25,6 +25,6 @@ export const MoviesCard = ({ movie, saved }) => {
                 </button>
             </div>
             <img src={filmPhoto} className="moviescard__img" alt="Фото из фильма" />
-        </div>
+        </li>
     )
 };

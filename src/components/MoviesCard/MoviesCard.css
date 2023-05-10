@@ -51,7 +51,7 @@
     height: auto;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1279px) {
     .mooviescards {
         width: 92%;
         grid-template-columns: 339px 339px;
@@ -60,7 +60,7 @@
     }
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 767px) {
     .mooviescards {
         width: 94%;
         grid-template-columns: 300px;

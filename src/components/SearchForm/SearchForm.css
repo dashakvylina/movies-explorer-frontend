@@ -15,10 +15,14 @@
 .searchform__form-input {
     background: none;
     border: none;
-    border-radius: 9px;
+
     height: 100%;
     flex-grow: 1;
     outline: none;
+}
+
+.searchform__form-input:active, .searchform__form-input:focus {
+    border-bottom: 1px solid blue;
 }
 
 .searchform__form-btn {
@@ -42,7 +46,7 @@
     margin-right: 10px;
 }
 
-.element__trash-img {
+.searchform__trash-img {
     width: auto;
     height: 34px;
     /* margin: 19px 30px 19px 0; */
@@ -130,14 +134,14 @@ input:checked+.slider:before {
     transform: translateX(16px);
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width:1279px) {
     .searchform {
         width: calc(100% - 60px);
         margin: 80px auto 110px auto;
     }
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 767px) {
     .searchform {
         width: calc(100% - 28px);
         margin: 80px auto 110px auto;

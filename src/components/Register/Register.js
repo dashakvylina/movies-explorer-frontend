@@ -7,7 +7,7 @@ import './Register.css';
 export const Register = () => {
 
     return (
-        <div className="register__signup">
+        <main className="register__signup">
             <img src={logo} className="header__logo header__logo_register" alt="Логотип" />
             <div className="register__text">Добро пожаловать!</div>
             <form className="register__form">
@@ -55,7 +55,7 @@ export const Register = () => {
                     Войти
                 </Link>
             </div>
-        </div >
+        </main >
     )
 }
 

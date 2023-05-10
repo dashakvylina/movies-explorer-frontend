@@ -5,7 +5,7 @@ import './Techs.css';
 export const Techs = () => {
 
     return (
-        <div className="techs" id="techs">
+        <section className="techs" id="techs">
             <h4 className="techs__title">Технологии</h4>
             <div className="techs__info">
                 <h2 className="techs__subtitle">7 технологий</h2>
@@ -22,6 +22,6 @@ export const Techs = () => {
                 <div className="techs__icon">mongoDB</div>
             </div>
 
-        </div>
+        </section>
     )
 }
