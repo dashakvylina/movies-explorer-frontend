@@ -1,0 +1,39 @@
+.navtab {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
+    bottom: 30px;
+    gap: 10px;
+}
+
+.navtab__link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 36px;
+    background-color: #E8E8E8;
+    width: 96px;
+    height: 36px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+
+@media screen and (max-width: 321px) {
+
+    .navtab {
+        margin-top: 0;
+        bottom: 17px;
+    }
+
+    .navtab__link {
+        font-size: 10px;
+        line-height: 26px;
+        width: 82px;
+        height: 26px;
+        border-radius: 6px;
+    }
+}

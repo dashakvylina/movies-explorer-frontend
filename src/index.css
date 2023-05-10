@@ -1,0 +1,61 @@
+@import url('./vendor/normalize.css');
+@import url('./vendor/fonts/font.css');
+
+body {
+  margin: 0;
+  font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 58px;
+  color: #000000;
+  margin: 0px;
+  padding: 0px;
+}
+
+h3 {
+  margin: 0;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  margin: 0px;
+  padding: 0px;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* @media screen and (max-width: 321px) { */
+body {
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+/* } */

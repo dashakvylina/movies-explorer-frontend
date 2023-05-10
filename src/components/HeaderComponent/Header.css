@@ -1,0 +1,107 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 89%;
+    margin: 18px auto 38px auto;
+}
+
+.header__logo {
+    width: 38px;
+    height: 38px;
+}
+
+.header__films {
+    display: flex;
+    margin-left: 44px;
+    gap: 16px;
+}
+
+.header__link {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header__me {
+    width: 100px;
+    height: 32px;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 32px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header__account {
+    display: flex;
+    align-items: center;
+}
+
+.header__account_unlogged {
+    gap: 30px;
+}
+
+.header__account_logged {
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.header__registration {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.header__input {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 32px;
+    color: #000000;
+    background-color: #2BE080;
+    width: 76px;
+    height: 32px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 769px) {
+    .header {
+        width: calc(100% - 60px);
+        height: 74px;
+        margin: 0 auto;
+    }
+
+    .header__account.header__account_logged {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .header {
+        margin: auto;
+        width: calc(100% - 28px);
+    }
+
+    .header__registration {
+        font-size: 10px;
+    }
+
+    .header__input {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 26px;
+        width: 54px;
+        height: 26px;
+    }
+
+    .header__account_unlogged {
+        gap: 14px;
+    }
+}
