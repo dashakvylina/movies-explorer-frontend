@@ -1,4 +1,4 @@
-# mesto-react
+# movies-react
 
 Чтобы запустить проект:
 
