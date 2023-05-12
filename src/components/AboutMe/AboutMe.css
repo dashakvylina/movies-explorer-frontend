@@ -1,0 +1,145 @@
+.student {
+    width: 89.06%;
+    margin: 110px auto 0 auto;
+}
+
+.student__title {
+    border-bottom: 1px solid black;
+    padding-bottom: 23px;
+}
+
+.student__about_desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.student__about-name {
+    margin-bottom: 18px;
+}
+
+.student__about-work {
+    margin-bottom: 26px;
+    font-weight: 500;
+}
+
+.student__about-life {
+    width: 600px;
+}
+
+
+.student__photo {
+    width: 270px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.student__about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 66px;
+}
+
+.student__about_link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    opacity: 10%
+}
+
+@media screen and (max-width: 1279px) {
+    .student {
+        width: calc(100% - 100px);
+    }
+
+    .student__about_text {
+        padding-right: 50px;
+    }
+
+    .student__title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .student__about-name {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .student__about-work {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .student__about-life {
+        font-size: 12px;
+        line-height: 18px;
+        width: 100%;
+
+    }
+
+    .student__about_link {
+        color: #000;
+        opacity: 1;
+    }
+
+    .student__photo {
+        width: 38.17%;
+        height: auto;
+    }
+
+
+
+}
+
+@media screen and (max-width: 767px) {
+    .student {
+        width: calc(100% - 28px);
+        margin-top: 140px;
+    }
+
+    .student__about {
+        flex-direction: column-reverse;
+        margin-top: 60px;
+    }
+
+    .student__about-name {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .student__about_link {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .student__about_text {
+        margin-bottom: 40px;
+    }
+
+    .student__photo {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .student__about-work {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .student__about-life {
+        font-size: 11px;
+        line-height: 16px;
+        height: auto;
+        margin: 0;
+    }
+
+    .student__title {
+        padding-bottom: 28px;
+
+    }
+}

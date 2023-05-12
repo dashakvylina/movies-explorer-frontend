@@ -1,0 +1,63 @@
+.notfound__res {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notfount__err {
+    font-size: 140px;
+    line-height: 170px;
+    font-weight: 400;
+    color: #000000;
+    margin: 246px auto 20px auto;
+}
+
+.notfound__text {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 184px;
+}
+
+.notfound_btn {
+    background-color: #FFFFFF;
+    color: #2BE080;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 769px) {
+
+    .notfount__err {
+        margin: 408px auto 20px auto;
+    }
+
+    .notfound_btn {
+        margin-bottom: 222px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+
+    .notfound__err {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .notfount__err {
+        margin: 329px auto 18px auto;
+        font-size: 80px;
+        line-height: 96px;
+    }
+
+    .notfound_btn {
+        margin-bottom: 284px;
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 30px;
+    }
+}
