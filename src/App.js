@@ -27,7 +27,6 @@ function App() {
       .then((res) => {
         if (res.email) {
           setCurrentUser(res);
-          setLoggedIn(true);
         }
 
       })
@@ -57,6 +56,7 @@ function App() {
 
         if (res.hasOwnProperty("_id")) {
           setLoggedIn(true); // обновляем стейт внутри App.js
+          setCurrentUser(res);
           history.push("/movies"); // и переадресуем пользователя!
         }
       })
