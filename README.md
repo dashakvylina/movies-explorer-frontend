@@ -20,3 +20,5 @@
 
 
 Ссылка на макет в figma: https://www.figma.com/file/uzfYZPofyzvzLNyC59Znjn/Diploma-(Copy)?node-id=932%3A3228&t=P4QrFUEpHpjg8VF3-1
+
+PR: https://github.com/dashakvylina/movies-explorer-frontend/pull/2
