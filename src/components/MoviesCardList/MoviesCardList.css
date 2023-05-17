@@ -12,10 +12,19 @@
     margin: 0;
 }
 
+.movies__list_mb {
+    margin-bottom: 80px;
+}
+
 .movies__line {
     height: 1px;
     background: #E8E8E8;
     margin-bottom: 80px;
+}
+
+.movies__error {
+    color: red;
+    margin-bottom: 20px;
 }
 
 .movies__more-btn {

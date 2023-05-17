@@ -10,11 +10,11 @@ import { Header } from '../HeaderComponent'
 import { Footer } from '../Footer'
 
 
-export const Main = () => {
+export const Main = ({ loggedIn }) => {
 
     return (
         <>
-            <Header />
+            <Header loggedIn={loggedIn} />
             <main>
                 <Promo />
                 <AboutProject />

@@ -1,27 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './Profile.css';
-import { Link } from "react-router-dom";
 import { Header } from '../HeaderComponent';
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import api from "../../utils/MainApi";
+import { useFormWithValidation } from "../../utils/useFormWithValidation";
 
 
+export const Profile = ({ loggedIn, logOut }) => {
+    const currentUser = React.useContext(CurrentUserContext);
+    const [err, setErr] = useState('');
+    const [info, setInfo] = useState('')
+    const { values: { name = currentUser.name, email = currentUser.email }, handleChange, isValid } = useFormWithValidation();
 
-export const Profile = () => {
+    useEffect(() => {
+        return () => {
+            setErr('');
+            setInfo('');
+        }
+    }, []);
+
+    const editProfile = () => {
+        api.updateUser(name, email).then(res => {
+
+            if (res.hasOwnProperty("_id")) {
+                setInfo('Профиль сохранен успешно!')
+            }
+        }).catch(err => setErr(err))
+    }
+
+    const sameValues = currentUser.name === name && email === currentUser.email;
 
     return (
         <>
-            <Header />
+            <Header loggedIn={loggedIn} />
             <main className="profile">
-                <h4 className="profile__title"> Привет, Дарья! </h4>
+                <h4 className="profile__title"> Привет, {currentUser.name ?? 'Безымянный'}! </h4>
                 <div className="profile__info">
-                    <form className="profile__form">
+                    <form className="profile__form" id="profile-form">
                         <div className="profile__name">
                             <span>Имя</span>
                             <input required
-                                id="username"
-                                name="username"
+                                id="name"
+                                name="name"
                                 type="text"
                                 placeholder="Имя"
                                 className="profile__input"
+                                minLength={2}
+                                maxLength={30}
+                                pattern='[A-Za-zА-Яа-я]+([- ][A-Za-zА-Яа-я]+)?'
+                                value={name}
+                                onChange={handleChange}
                             ></input></div>
                         <div className="profile__email">
                             <span>E-mail</span>
@@ -31,17 +59,20 @@ export const Profile = () => {
                                 type="text"
                                 placeholder="Email"
                                 className="profile__input"
+                                value={email}
+                                onChange={handleChange}
                             ></input>
                         </div>
-
+                        {info.length > 0 && <span className="profile__mes profile__mes_success">{info}</span>}
+                        {err.length > 0 && <span className="profile__mes profile__mes_error">{err}</span>}
                     </form>
                     <div className="profile__link">
-                        <Link to="/" className="profile__sublink">
+                        <button className="profile__sublink" disabled={!isValid || sameValues} onClick={editProfile}>
                             Редактировать
-                        </Link>
-                        <Link to="/" className="profile__sublink">
+                        </button>
+                        <button className="profile__sublink" onClick={logOut}>
                             Выйти из аккаунта
-                        </Link>
+                        </button>
                     </div >
                 </div>
             </main >

@@ -21,12 +21,24 @@
     gap: 9px;
 }
 
+.moviescard__link {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.moviescard__img {
+    width: 100%;
+    height: auto;
+}
+
 .movies__save-btn {
     border: none;
     background: none;
     padding: 0;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 .moviescard__name {
