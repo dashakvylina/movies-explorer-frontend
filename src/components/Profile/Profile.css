@@ -19,6 +19,7 @@
     justify-content: center;
     width: 410px;
     margin: auto;
+    position: relative;
 }
 
 .profile__input {
@@ -53,7 +54,9 @@
     margin: auto;
     margin-top: 220px;
     align-items: center;
-
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 .profile__sublink {
@@ -62,11 +65,33 @@
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.profile__sublink:disabled {
+    cursor: not-allowed;
 }
 
 .profile__sublink:last-child {
     color: #EE3465;
     margin-top: 16px;
+}
+
+.profile__mes {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+
+.profile__mes_success {
+    color: green;
+}
+
+.profile__mes_err {
+    color: red;
+    bottom: -65px;
 }
 
 @media screen and (max-width: 769px) {

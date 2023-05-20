@@ -1,61 +1,80 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
-import './Register.css';
+import "./Register.css";
+import { useFormWithValidation } from "../../utils/useFormWithValidation";
 
+export const Register = ({ onRegisterSubmit }) => {
+  const { values, handleChange, errors, isValid, resetForm } =
+    useFormWithValidation();
 
-export const Register = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // здесь обработчик регистрации
 
-    return (
-        <main className="register__signup">
-            <img src={logo} className="header__logo header__logo_register" alt="Логотип" />
-            <div className="register__text">Добро пожаловать!</div>
-            <form className="register__form">
-                <span className="register__input-name">Имя</span>
-                <input
-                    required
-                    id="name"
-                    name="name"
-                    type="text"
-                    // value={email}
-                    // onChange={(ev) => setEmail(ev.target.value)}
-                    className="register__input"
-                />
-                <span className="register__input-name">E-mail</span>
-                <input
-                    required
-                    id="email"
-                    name="email"
-                    type="text"
-                    //   value={email}
-                    //   onChange={(ev) => setEmail(ev.target.value)}
-                    className="register__input"
-                />
-                <span className="register__input-name">Пароль</span>
-                <input
-                    required
-                    id="password"
-                    name="password"
-                    type="password"
-                    //   value={password}
-                    //   onChange={(ev) => setPassword(ev.target.value)}
-                    className="register__input"
-                />
-                <span className="register__input-name">Что-то пошло не так...</span>
+    onRegisterSubmit(values); // {name: '', email: '', }
+    resetForm();
+  };
 
-            </form>
-            <div className="register__button-container">
-                <button type="submit" className="register__link">
-                    Зарегистрироваться
-                </button>
-            </div>
-            <div className="register__subtext">
-                <span >Уже зарегистрированы?</span>
-                <Link to="/signin" className="register__sublink">
-                    Войти
-                </Link>
-            </div>
-        </main >
-    )
-}
+  return (
+    <main className="register__signup">
+      <img
+        src={logo}
+        className="header__logo header__logo_register"
+        alt="Логотип"
+      />
+      <div className="register__text">Добро пожаловать!</div>
+      <form onSubmit={handleSubmit} className="register__form">
+        <span className="register__input-label">Имя</span>
+        <input
+          required
+          id="name"
+          name="name"
+          type="text"
+          value={values.name}
+          onChange={handleChange}
+          className="register__input"
+          pattern="[A-Za-zА-Яа-я]+([- ][A-Za-zА-Яа-я]+)?"
+        />
+        <span className="register__input-error">{errors.name}</span>
+        <span className="register__input-label">E-mail</span>
+        <input
+          required
+          id="email"
+          name="email"
+          type="email"
+          value={values.email}
+          onChange={handleChange}
+          className="register__input"
+        />
+        <span className="register__input-error">{errors.email}</span>
+        <span className="register__input-label">Пароль</span>
+        <input
+          required
+          id="password"
+          name="password"
+          type="password"
+          value={values.password}
+          onChange={handleChange}
+          className="register__input"
+          minLength={2}
+        />
+        <span className="register__input-error">{errors.password}</span>
 
+        <button
+          type="submit"
+          className="register__submit-btn"
+          disabled={!isValid}
+        >
+          Зарегистрироваться
+        </button>
+      </form>
+      <div className="register__subtext">
+        <span>Уже зарегистрированы?</span>
+        <Link to="/signin" className="register__sublink">
+          Войти
+        </Link>
+      </div>
+    </main>
+  );
+};

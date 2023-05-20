@@ -3,6 +3,7 @@
     flex-direction: column;
     margin: 70px auto 0 auto;
     max-width: 396px;
+    width: 396px;
 }
 
 .register__text {
@@ -26,7 +27,7 @@
 
 }
 
-.register__input-name {
+.register__input-label {
     font-size: 10px;
     font-weight: 400;
     line-height: 12px;
@@ -35,16 +36,19 @@
 
 }
 
-.register__input-name:last-child {
+.register__input-error {
     color: #EE3465;
     margin-top: 0;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
 }
 
-.register__input-name:first-child {
+.register__input-label:first-child {
     margin-top: 0;
 }
 
-.register__link {
+.register__submit-btn {
     height: 45px;
     width: 100%;
     background-color: #2BE080;
@@ -52,6 +56,11 @@
     margin-top: 134px;
     color: #FFFFFF;
     border: none;
+}
+
+.register__submit-btn:disabled {
+    background: #F8F8F8;
+    color: #C2C2C2;
 }
 
 .register__subtext {
@@ -72,14 +81,14 @@
     margin-left: 6px;
 }
 
-@media screen and (max-width: 769px) {
+@media (max-width: 1279px) {
     .register__signup {
         width: calc(100% - 60px);
         margin-top: 232px;
     }
 }
 
-@media screen and (max-width: 321px) {
+@media (max-width: 767px) {
     .register__signup {
         margin-top: 56px;
         height: 100vh;

@@ -1,12 +1,6 @@
 import React from "react";
-import './Navigation.css';
-
+import "./Navigation.css";
 
 export const Navigation = () => {
-
-    return (
-        <div>
-
-        </div>
-    )
+  return <div></div>;
 };

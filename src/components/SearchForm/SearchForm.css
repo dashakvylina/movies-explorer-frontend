@@ -21,6 +21,14 @@
     outline: none;
 }
 
+.searchform__form-mes {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    color: red;
+    font-size: 14px;
+}
+
 .searchform__form-input:active, .searchform__form-input:focus {
     border-bottom: 1px solid blue;
 }
@@ -37,6 +45,11 @@
     width: 34px;
     height: auto;
     margin-right: 30px;
+}
+
+.searchform__form-btn:disabled {
+    opacity: 0.5;
+    cursor: initial;
 }
 
 .searchform__form-img {
