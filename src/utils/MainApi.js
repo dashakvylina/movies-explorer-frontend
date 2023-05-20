@@ -46,8 +46,8 @@ class MainApi {
 }
 
 const api = new MainApi({
-  // baseUrl: "https://api.students.dasha.nomoredomains.club/users/me",
-  baseUrl: "http://localhost:3001",
+  baseUrl: "https://api.students.dasha.nomoredomains.club",
+  // baseUrl: "http://localhost:3001",
   headers: {
     "Content-Type": "application/json",
   },
